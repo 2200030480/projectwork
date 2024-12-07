@@ -1,0 +1,26 @@
+<html xmlns:h="http://java.sun.com/jsf/html">
+<head>
+	<title>JSF Validation</title>
+</head>
+<body>
+	<h3>Bean Validation</h3>
+	<h:form>
+		Name :
+			<h:inputText value="#{buser.name}" id="name" validatorMessage="Value is required"/>
+			<h:message for="name" style="color:red"/>
+			<br/>
+			<br/>
+		Age :
+			<h:inputText value="#{buser.age}" id="age" validatorMessage="Age between 18 and 30"/>
+			<h:message for="age" style="color:red"/>
+			<br/>
+			<br/>
+		Mobile No :
+			<h:inputText value="#{buser.mobileno}" id="mno" validatorMessage="Mobile number must have 10 digit"/>
+			<h:message for="mno" style="color:red"/>
+			<br/>
+			<br/>
+		<h:commandButton action="responsebean" value="Submit"/>
+</h:form>
+</body>
+</html>
